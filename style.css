@@ -1,0 +1,88 @@
+/* Mengatur font agar lebih bersih */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth; /* Membuat efek gulir antar bagian menjadi mulus */
+}
+
+/* --- Desain Bilah Navigasi --- */
+/* Kondisi saat berada di puncak halaman (transparan) */
+.transparan-awal {
+    background-color: transparent !important;
+    transition: background-color 0.4s ease, padding 0.4s ease;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Kondisi saat halaman digulir (kelas ini akan ditambahkan oleh jQuery) */
+.navbar-scrolled {
+    background-color: #123B5D !important; /* Warna biru dongker gelap */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- Desain Beranda (Hero Section) --- */
+.hero {
+    /* Gunakan warna gradien linear digabung dengan gambar */
+    background: linear-gradient(rgba(12, 43, 68, 0.82), rgba(18, 59, 93, 0.82)), url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1920&q=85') center/cover;
+    height: 100vh; /* Memakan 100% tinggi layar penampil */
+    min-height: 500px;
+}
+
+/* --- Dekorasi Estetika --- */
+.garis-bawah {
+    width: 60px;
+    height: 4px;
+    background-color: #D6A84F; /* Warna aksen emas/kuning */
+    border-radius: 2px;
+}
+
+/* --- Efek Interaktif (Hover) --- */
+.efek-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.efek-hover:hover {
+    transform: translateY(-10px); /* Mengangkat kartu 10px ke atas */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* Styling & penyesuaian rasio gambar kegiatan agar selalu proporsional */
+.item-portofolio img {
+    width: 100%;
+    height: 250px; /* Menyeragamkan tinggi seluruh gambar kegiatan */
+    object-fit: cover; /* Mencegah gambar tertarik/gepeng dengan memotong area lebih secara simetris */
+    object-position: center; /* Memastikan titik fokus gambar berada di tengah */
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.item-portofolio img:hover {
+    transform: scale(1.05); /* Memperbesar gambar 5% */
+}
+
+/* Penyesuaian warna tombol sesuai identitas visual Sisfo */
+.btn-primary {
+    background-color: #D6A84F;
+    border-color: #D6A84F;
+    color: #123B5D;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #BD8E35;
+    border-color: #BD8E35;
+    color: #ffffff;
+}
+
+.btn-outline-primary {
+    color: #123B5D;
+    border-color: #D6A84F;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary.aktif {
+    background-color: #D6A84F;
+    border-color: #D6A84F;
+    color: #123B5D;
+}
